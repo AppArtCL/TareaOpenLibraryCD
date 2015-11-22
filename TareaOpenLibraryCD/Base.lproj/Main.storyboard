@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TareaOpenLibraryCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="978-84-376-0494-7" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OnS-RH-8ga">
+                                <rect key="frame" x="65" y="84" width="190" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Epv-qj-D2b"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese código ISBN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-dt-UfM">
+                                <rect key="frame" x="65" y="42" width="190" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="au9-Cv-Fyn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIK-sB-Pd2">
+                                <rect key="frame" x="131" y="132" width="58" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="3qP-Zr-o9Z"/>
+                                </constraints>
+                                <state key="normal" title="Limpiar"/>
+                                <connections>
+                                    <action selector="limpiarCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kax-Hi-vrM"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk4-v7-HMa">
+                                <rect key="frame" x="40" y="194" width="240" height="229"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="n7S-5R-cFS">
+                                <rect key="frame" x="150" y="198" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4NY-dt-UfM" firstAttribute="leading" secondItem="OnS-RH-8ga" secondAttribute="leading" id="23q-VI-kBf"/>
+                            <constraint firstItem="Yk4-v7-HMa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3GJ-9p-gzN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yk4-v7-HMa" secondAttribute="bottom" constant="145" id="7SI-jx-2Df"/>
+                            <constraint firstItem="4NY-dt-UfM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="BrC-gf-iPZ"/>
+                            <constraint firstItem="CIK-sB-Pd2" firstAttribute="top" secondItem="OnS-RH-8ga" secondAttribute="bottom" constant="18" id="ElA-Ql-dFO"/>
+                            <constraint firstItem="Yk4-v7-HMa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="bjD-NE-gUV"/>
+                            <constraint firstItem="4NY-dt-UfM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="49" id="iat-6w-qJG"/>
+                            <constraint firstItem="4NY-dt-UfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kbW-HB-Mmc"/>
+                            <constraint firstItem="n7S-5R-cFS" firstAttribute="top" secondItem="CIK-sB-Pd2" secondAttribute="bottom" constant="36" id="nzd-Ba-84q"/>
+                            <constraint firstItem="OnS-RH-8ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uEM-Zs-vvr"/>
+                            <constraint firstItem="OnS-RH-8ga" firstAttribute="top" secondItem="4NY-dt-UfM" secondAttribute="bottom" constant="21" id="viq-Qt-G0A"/>
+                            <constraint firstItem="CIK-sB-Pd2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wMW-KM-paz"/>
+                            <constraint firstItem="n7S-5R-cFS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wXF-hu-GHc"/>
+                            <constraint firstItem="Yk4-v7-HMa" firstAttribute="top" secondItem="CIK-sB-Pd2" secondAttribute="bottom" constant="32" id="yXN-4Y-R3a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codigoISBN" destination="OnS-RH-8ga" id="Plb-DW-WBb"/>
+                        <outlet property="detalleCodigoISBN" destination="Yk4-v7-HMa" id="Rax-Mf-MQN"/>
+                        <outlet property="indicadorActividad" destination="n7S-5R-cFS" id="a9d-g2-tcR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="527"/>
+        </scene>
+    </scenes>
+</document>
